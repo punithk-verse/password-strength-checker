@@ -27,11 +27,11 @@ password-strength-checker/
 Enter password: hello123
 
 🔍 Password Check:
-Length   : False
-Upper    : False
-Lower    : True
-Digit    : True
-Special  : False
+-Length   : False
+-Upper    : False
+-Lower    : True
+-Digit    : True
+-Special  : False
 
 💡 Strength:  Medium
 
