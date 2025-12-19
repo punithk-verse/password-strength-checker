@@ -6,7 +6,7 @@ def check_password(password):
          "special":False}
   special="!@#$%^&*"
   if len(password)>=8:
-    rules["length]=True
+    rules["length"]=True
   for ch in password:
     if ch.isupper():
       rules["upper"]=True
@@ -22,7 +22,7 @@ def get_strength(score):
   if score<=2:
     return "Weak"
   elif score<=4:
-    return " Medium"
+    return "Medium"
   else:
     return "strong"
 def suggestion(rules):
@@ -34,7 +34,7 @@ def suggestion(rules):
   if not rules["lower"]:
     tip.append("use a lower character in your password")
   if not rules["upper"]:
-    tip.append(" Add a lowercase letter")
+    tip.append(" Add a uppercase letter")
   if not rules["special"]:
     tip.append("use a special character ")
   return tip
@@ -43,7 +43,7 @@ password=input("Enter the password -->")
 rules,score=check_password(password)
 strength =get_strength(score)
 print("password check:")
-for rule,value in rules.item():
+for rule,value in rules.items():
   print(f"{rule.capitalize():8}: {value}")
 print("strength of password",strength)
 if strength!="strong":
